@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Почтовые адреса</title>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="row">
+            <div class="head"> Почтовые адреса</div>
+        </div>
+        <div class="row">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="th">№ п/п</th>
+                        <th class="th">Страна</th>
+                        <th class="th">Город</th>
+                        <th class="th">Улица</th>
+                        <th class="th">Номер дома</th>
+                        <th class="th">Индекс</th>
+                        <th class="th">Дата и время</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var a in ViewBag.Addreses)
+            {
+                        <tr>
+                            <td><p>@a.Country</p></td>
+                            <td><p>@a.City</p></td>
+                            <td><p>@a.Stereet</p></td>
+                            <td><p>@a.BuildingNumber</p></td>
+                            <td><p>@a.PostID</p></td>
+                            <td><p>@a.DateTime</p></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="th">
+                <ul class="pagination">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>   
+</body>
+</html>
